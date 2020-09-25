@@ -124,13 +124,9 @@ int main(int argc, char *argv[]) {
             // no need to bzero
         }
 
+        // close the socket 
         close(sockfd); 
     }
     
     return 0;
-
-	// function for chat 
-	// func(sockfd); 
-
-	// close the socket 
 }
