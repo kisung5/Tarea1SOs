@@ -43,16 +43,7 @@ static int getLine (char *prmpt, char *buff, size_t sz) {
     return OK;
 }
 
-// void func(int sockfd) 
-// { 
-	
-//     for (;;) {
-
-//     }
-// } 
-
-int main() 
-{ 
+int main(int argc, char *argv[]) { 
 
     char buff[MAX]; 
 	int n;
@@ -104,7 +95,7 @@ int main()
 
         // assign IP, PORT 
         servaddr.sin_family = AF_INET; 
-        servaddr.sin_addr.s_addr = inet_addr("127.0.0.1"); 
+        servaddr.sin_addr.s_addr = inet_addr(argv[1]); 
         servaddr.sin_port = htons(PORT); 
 
         // connect the client socket to server socket 
